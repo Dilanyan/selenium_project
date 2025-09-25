@@ -33,11 +33,8 @@ try:
     element_links = driver.find_element(By.ID, 'item-5')
     element_links.click()
     links = driver.find_elements(By.TAG_NAME, "a")
-    tags_h5 = driver.find_elements(By.TAG_NAME, "h5")
-    for tag in tags_h5:
-        print(tag.text)
-        for link in links:
-            print(link.text)
+    for link in links:
+        print(link.text)
 
 except (
         NoSuchElementException,
